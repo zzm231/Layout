@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         LinearLayout(this).apply {
             layoutParams = LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,dp2px(100))
-            orientation = LinearLayout.VERTICAL
+            orientation = LinearLayout.HORIZONTAL
             background = getDrawable(R.color.purple_200)
             container.addView(this)
         }.apply {
