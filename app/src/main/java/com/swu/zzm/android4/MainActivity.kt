@@ -23,9 +23,21 @@ class MainActivity : AppCompatActivity() {
             orientation = LinearLayout.VERTICAL
 
             background = getDrawable(R.color.white)
-        }.also {
-            setContentView(it)
-        }
+        }.also { setContentView(it) }
+
+        //添加第一个子控件
+        LinearLayout(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,dp2px(100))
+            orientation = LinearLayout.VERTICAL
+            background = getDrawable(R.color.black)
+        }.also { container.addView(it) }
+
+
+    }
+
+    fun dp2px(dp:Int): Int {
+        return (resources.displayMetrics.density * dp).toInt()
     }
 
     private fun addLinearLayoutJava(){
